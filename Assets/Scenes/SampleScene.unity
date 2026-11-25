@@ -424,8 +424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e0f85563406fc4b9e6a834cca7edfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
-  pitchSensitivity: 1
-  yawSensitivity: 1
+  playerTransform: {fileID: 69295718}
+  mouseSensitivity: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0

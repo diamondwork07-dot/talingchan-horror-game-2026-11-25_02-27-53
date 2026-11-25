@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private const float MinPitch = -90f;
-    private const float MaxPitch = 90f;
-    private const float MinYaw = -90f;
-    private const float MaxYaw = 90f;
-    private const float MinRoll = -45f;
-    private const float MaxRoll = 45f;
+    private const float MinXRotation = -90f;
+    private const float MaxXRotation = 90f;
+    private const float MinZRotation = -45f;
+    private const float MaxZRotation = 45f;
+    private const float FullCircleDegrees = 360f;
 
-    [SerializeField] private float pitchSensitivity = 0f; // TODO: Set balance value
-    [SerializeField] private float yawSensitivity = 0f;   // TODO: Set balance value
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private float mouseSensitivity = 0f; // TODO: Set balance value
 
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -18,35 +17,48 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
+        if (playerTransform == null)
+        {
+            Debug.LogError("CameraController: playerTransform is not assigned on " + gameObject.name + ". Camera rotation disabled.", this);
+            enabled = false;
+            return;
+        }
+
+        if (!transform.IsChildOf(playerTransform))
+        {
+            Debug.LogWarning("CameraController: " + gameObject.name + " is not a child of " + playerTransform.name + ". Pitch and roll will not follow the player correctly.", this);
+        }
+
+        if (mouseSensitivity < 0f)
+        {
+            Debug.LogWarning("CameraController: mouseSensitivity is negative on " + gameObject.name + ". Mouse input will be inverted.", this);
+        }
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        if (pitchSensitivity < 0f)
-        {
-            Debug.LogWarning("CameraController: pitchSensitivity is negative on " + gameObject.name + ". Pitch input will be inverted.", this);
-        }
-
-        if (yawSensitivity < 0f)
-        {
-            Debug.LogWarning("CameraController: yawSensitivity is negative on " + gameObject.name + ". Yaw input will be inverted.", this);
-        }
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        float mouseX = Input.GetAxisRaw("Mouse X");
-        float mouseY = Input.GetAxisRaw("Mouse Y");
+        if (playerTransform == null)
+        {
+            return;
+        }
 
-        // Mouse up (positive Y) looks up, which decreases X rotation.
-        xRotation -= mouseY * pitchSensitivity;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-        // Mouse right (positive X) turns right, which increases Y rotation.
-        yRotation += mouseX * yawSensitivity;
+        // Mouse up (positive Y) looks up, which decreases the X angle.
+        xRotation -= mouseY;
 
-        xRotation = Mathf.Clamp(xRotation, MinPitch, MaxPitch);
-        yRotation = Mathf.Clamp(yRotation, MinYaw, MaxYaw);
-        zRotation = Mathf.Clamp(zRotation, MinRoll, MaxRoll);
+        // Mouse right (positive X) turns right, which increases the Y angle.
+        yRotation += mouseX;
 
-        transform.localRotation = Quaternion.Euler(xRotation, yRotation, zRotation);
+        xRotation = Mathf.Clamp(xRotation, MinXRotation, MaxXRotation);
+        yRotation = Mathf.Repeat(yRotation, FullCircleDegrees);
+        zRotation = Mathf.Clamp(zRotation, MinZRotation, MaxZRotation);
+
+        playerTransform.rotation = Quaternion.Euler(0f, yRotation, 0f);
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, zRotation);
     }
 }
