@@ -875,7 +875,13 @@ PlayerSettings:
   XboxOneXTitleMemory: 8
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -898,11 +904,11 @@ PlayerSettings:
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
   enableDirectStorage: 0
-  cloudProjectId: ff6fde7e-6e54-47b3-93fa-80eeed823836
+  cloudProjectId: ebb2c7a0-1158-4a11-8b6a-70b7fdcb80dc
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: talingchan horror game 2026-11-25_02-27-50
-  organizationId: lesene
+  projectName: talingchan horror game
+  organizationId: 
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

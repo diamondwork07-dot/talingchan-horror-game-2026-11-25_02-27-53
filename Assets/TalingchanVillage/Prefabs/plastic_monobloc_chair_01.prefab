@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4508587900526481498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2652608082617896193}
+  m_Layer: 0
+  m_Name: plastic_monobloc_chair_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2652608082617896193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4508587900526481498}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4017136541077867714}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3473688305395919657
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2652608082617896193}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100.01805
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100.01805
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100.01805
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.000019580126
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.022158742
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2928a85dea7ac644d8d9a8ecf81a34c5, type: 2}
+    - target: {fileID: 919132149155446097, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_Name
+      value: plastic_monobloc_chair_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da33833de4746264389d789ba9167ff7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2599701738400060513}
+  m_SourcePrefab: {fileID: 100100000, guid: da33833de4746264389d789ba9167ff7, type: 3}
+--- !u!4 &4017136541077867714 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: da33833de4746264389d789ba9167ff7, type: 3}
+  m_PrefabInstance: {fileID: 3473688305395919657}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4392255151893665400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: da33833de4746264389d789ba9167ff7, type: 3}
+  m_PrefabInstance: {fileID: 3473688305395919657}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2599701738400060513
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4392255151893665400}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5105332762703509960, guid: da33833de4746264389d789ba9167ff7, type: 3}
